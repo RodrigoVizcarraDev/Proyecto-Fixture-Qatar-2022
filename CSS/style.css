@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar-color: #2C3E50;
+    --white-color: #fff;
+    --background_color_fasesImpar: #DADADA;
+    --background_color_fasesPar: #F3F7FE;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ESTILOS GENERALES PARA CONTENEDORES */
+
+.contenedor {
+    width: 100%;
+}
+
+/* --------------- HEADER ESTILOS --------------- */
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--navbar-color);
+    height: 60px;
+    padding: 0 3.5rem;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    display: none;
+}
+
+.navbar {
+    width: 35rem ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+
+/* --------------- MAIN ESTILOS --------------- */
+.main {
+    margin-top: 115px ;
+}
+
+.contenedor__imagenPrincipal {
+    width: 100%;
+    text-align: center;
+    
+}
+
+.imagenPrincipal {
+    width: 80%;
+} 
+
+/* FASES */
+
+.contenedor__grupos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.grupos {
+    width: 32%;
+    max-width: 700px;
+    height: max-content;
+    margin: 8px 0;
+}
+
+.header__grupos {
+    text-align: center;
+    background-color: #5e0016;
+    color: var(--white-color);
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.contenedor__partidos {
+    width: 100%;
+    height: max-content;
+}
+
+.primerPartido, .tercerPartido, .quintoPartido{
+    background: #dadada;
+
+}
+
+.segundoPartido, .cuartoPartido, .sextoPartido {
+    background: #F3F7FE;
+}
+
+.partidos {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.horaPartidos, .nombreEstadio {
+    font-size: .6rem;
+}
+
+.segundaSeccion {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+    width: 46%;
+    font-size: .58rem;
+}
+
+
+.primerSeccion, .terceraSeccion {
+    width: 27%;
+    text-align: center;
+}
+
+/* asdasdasd */
+
+
+
+.horaPartidos, .nombreEstadio {
+    color: #4e4e4e;
+}
+
+.contenedor__paises {
+    text-align: center;
+}
+
+.contenedor__paises img {
+    width: 1.8rem;
+}
+
+.fases {
+    width: 100%;
+    padding: 0 .4rem 0 .4rem;
+    scroll-margin-top: 5rem;
+}
+
+.titulosFases {
+    color: var(--white-color);
+    padding-bottom: .5rem;
+}
+
+.contenedorPartidosFases {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.parrafoFases {
+    color: #4e4e4e;
+    padding: .5rem .4rem;
+}
+
+.primerPartidoOctavos,
+.tercerPartidoOctavos,
+.quintoPartidoOctavos,
+.septimoPartidoOctavos {
+    background: var(--background_color_fasesImpar);
+}
+
+.segundoPartidoOctavos,
+.cuartoPartidoOctavos,
+.sextoPartidoOctavos,
+.octavoPartidoOctavos {
+    background: var(--background_color_fasesPar);
+}
+
+
+.primerPartidoCuartos,
+.tercerPartidoCuartos {
+    background: var(--background_color_fasesImpar);
+}
+
+.segundoPartidoCuartos,
+.cuartoPartidoCuartos {
+    background: var(--background_color_fasesPar);
+}
+
+.primerPartidoSemifinales {
+    background: var(--background_color_fasesImpar);
+}
+.segundoPartidoSemifinales {
+    background: var(--background_color_fasesPar);
+}
+
+.partidoTercerPuesto {
+    background: var(--background_color_fasesImpar);
+}
+
+.partidoFinal {
+    background: var(--background_color_fasesImpar);
+}
+
+.contenedorLinkVolver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.linkVolverArriba {
+    text-decoration: none;
+    color: var(--white-color);
+    
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--navbar-color);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.derechosReservados {
+    color: var(--white-color);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1400px) {
+    .contenedor {
+        padding: 0 4.5rem;
+    }
+
+    .horaPartidos, .nombreEstadio {
+        font-size: .64rem;
+    }
+    
+    .segundaSeccion {
+        font-size: .70rem;
+    }
+}
+@media (max-width: 1040px) {
+    .header {
+        justify-content: start;
+        padding: 0 .5rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .grupos {
+        width: 45%;
+    }
+
+    .segundaSeccion {
+        font-size: .54rem;
+    }
+}
+
+@media (max-width: 678px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .grupos {
+        width: 100%;
+    }
+
+    .horaPartidos, .nombreEstadio {
+        font-size: .60rem;
+    }
+
+    .segundaSeccion {
+        display: flex;
+        font-size: 10px;
+        font-weight: bold;
+        font-size: .49rem;
+    }
+}
+
+
